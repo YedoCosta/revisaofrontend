@@ -8,13 +8,13 @@
 var button = document.querySelector("button");
 
 button.onclick = function () {
-  var nome1 = prompt("Qual é o comando para listar o estatus do git bash?");
+  var nome = prompt("Qual é o comando para listar o estatus do git bash?");
   if ((nome == "git status")) {
-    alert("O " + nome1 + ", serve para listar o status git.Parabéns você acertou!");
+    alert("O " + nome + ", serve para listar o status git.Parabéns você acertou!");
 
   }
   else {
-    alert("O " + nome1 + ", serve para listar o status git. Você errou!");
+    alert("Voce errou!!! A resposta correta é: git status");
 
   }
 
