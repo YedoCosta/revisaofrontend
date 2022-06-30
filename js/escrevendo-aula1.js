@@ -7,9 +7,9 @@
 */
 
 
-var button = document.querySelector("button");
+var botao = document.querySelector("button");
 var ct=0;
-button.onclick = function () {
+botao.onclick = function () {
   var nome = prompt("Qual é o comando para iniciar o git?");
   if ((nome == "git init")) {
     alert("O " + nome + ". Parabéns você acertou!");
