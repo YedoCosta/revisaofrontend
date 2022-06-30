@@ -6,17 +6,23 @@
 
 */
 var button = document.querySelector("button");
-
+var ct=0;
 button.onclick = function () {
   var nome = prompt("Qual é o comando para listar o estatus do git bash?");
   if ((nome == "git status")) {
     alert("O " + nome + ", serve para listar o status git.Parabéns você acertou!");
-
+    window.location="aula3.html";
   }
   else {
-    alert("Voce errou!!! A resposta correta é: git status");
+    ct ++;
+    if ((ct==3)){
+      window.location="aula1.html";
+    }
+      else {
+      alert(" Você errou! tem mais "+(3-ct)+" chances");
+      }
 
   }
 
-  window.location="aula3.html";
+
 }
