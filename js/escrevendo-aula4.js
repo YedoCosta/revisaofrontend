@@ -6,17 +6,35 @@
 
 */
 var button = document.querySelector("button");
-
 button.onclick = function () {
   var nome = prompt("Qual é o comando para enviar o conteúdo do repositório local para um repositório remoton o git bash?");
   if ((nome == "git push")) {
     alert("O " + nome + ". Parabéns você acertou!");
-
+    window.location = "aula5.html";
   }
   else {
-    alert("Voce errou!!! A resposta correta é: git push");
+
+    //============== inicio sessionStorage ======================
+    if (typeof (Storage) !== "undefined") {
+      if (sessionStorage.count) {
+        sessionStorage.count = Number(sessionStorage.count) + 1;
+      } else {
+        sessionStorage.count = 1;
+      }
+    } else {
+      for (var i = 1; i < 10000000; i++);
+    }
+    //============== fim sessionStorage ======================
+
+    if ((sessionStorage.count == 3)) {
+      alert(" Voce cometeu ao todo " + sessionStorage.count + " erros ====>  Infelizmente voltará para a questão 1 <=======")
+      window.location = "aula1.html";
+    }
+    else {
+      alert(" Você errou! tem mais " + (3 - sessionStorage.count) + " chances");
+    }
 
   }
 
-  window.location="aula5.html";
+
 }
