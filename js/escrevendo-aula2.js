@@ -5,6 +5,7 @@
   Vamos declarar variáveis no JavaScript?
 
 */
+alert(" Questão 2 - sessionStorage.count: "+sessionStorage.count)
 var button = document.querySelector("button");
 var ct=0;
 button.onclick = function () {
