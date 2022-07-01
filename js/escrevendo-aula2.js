@@ -7,7 +7,6 @@
 */
 alert(" Questão 2 - sessionStorage.count: "+sessionStorage.count)
 var button = document.querySelector("button");
-var ct=0;
 button.onclick = function () {
   var nome = prompt("Qual é o comando para listar o estatus do git bash?");
   if ((nome == "git status")) {
@@ -15,12 +14,24 @@ button.onclick = function () {
     window.location="aula3.html";
   }
   else {
-    ct ++;
-    if ((ct==3)){
+
+        //====================================
+        if (typeof (Storage) !== "undefined") {
+          if (sessionStorage.count) {
+            sessionStorage.count = Number(sessionStorage.count) + 1;
+          } else {
+            sessionStorage.count = 1;
+          }
+        } else {
+          for(var i = 1;i <10000000;i++);
+        }
+        //====================================
+
+    if ((sessionStorage.count==3)){
       window.location="aula1.html";
     }
       else {
-      alert(" Você errou! tem mais "+(3-ct)+" chances");
+      alert(" Você errou! tem mais "+(3-sessionStorage.count)+" chances");
       }
 
   }
